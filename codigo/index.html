@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tienda especializada en productos para mascotas.
+     Encuentra juguetes, camas y accesorios para perros y gatos.">
+    <title>Tienda de Mascotas | Productos para tus compañeros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+    <p>🤗​¡Compras sobre $30.000 tienen envío gratis!</p>  
+    </div>
+    <header>
+      <nav class="nav-container" >
+        <div class="nav-left"> 
+        <ul class="nav-bar">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#acerca-de">Acerca de</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        </div>
+        <!-- Logo de la tienda de mascotas -->
+
+        <div class="logo-container">
+          <img src="./img/final-0015.png" alt="Logo de la tienda de mascotas" class="logo" />
+        </div>
+
+        <div class="nav-right " >
+          <button class="usuario">👤</button>
+          <button class="carrito">🛒</button>
+        </div>
+        <!-- menú de hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio">
+      <img src="./img/gato1.png" alt="gato" class="decoracion gato" />
+      <img src="./img/perro1.png" alt="perro" class="decoracion perro" />
+      <div class="titulo">
+        <h1>Todo lo que necesita, en un solo lugar</h1>
+        <p>
+          Bienvenido a nuestro sitio web donde encontraras cosas para tu
+          mascota. Aquí encontrarás información sobre nuestros servicios y
+          proyectos.
+        </p>
+        <h4>lo mejor que podras darle a tu mascota</h4>
+        <form>
+          
+          <input
+            type="email"
+            placeholder="Ingresa tu correo para recibir ofertas"
+            required
+          />
+          <button type="submit">Unirme</button>
+        </form>
+      </div>
+      </section>
+      <!--productos-->
+      <section class="productos" id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-container">
+          <div class="producto">
+            <img src="./img/juguete1.jpg" alt="Juguete para perro" />
+            <h3>Juguete para perro</h3>
+            <div class="info-producto">
+              <p class="precio">$15.000 CLP</p>
+              <button class="btn-agregar">Agregar al carro</button>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="./img/cama1.jpg" alt="Cama para gato" />
+            <h3>Cama para gato</h3>
+            <div class="info-producto">
+            <p class="precio">$20.000 CLP</p>
+            <button class="btn-agregar">Agregar al carro</button>
+          </div>
+          </div>
+          <div class="producto">
+            <img src="./img/bebedero1.jpg" alt="Dispensador de gato" />
+            <h3>Dispensador para gato</h3>
+            <div class="info-producto">
+            <p class="precio">$12.000 CLP</p>
+            <button class="btn-agregar">Agregar al carro</button>
+          </div>
+          </div>
+        </div>
+      </section>
+      <!--acerca de -->
+      <section class="acerca" id="acerca-de">
+        <div class="acerca-container">
+        <h2>Acerca de Nosotros</h2>
+        <div class="acerca-content">
+          <div class="acerca-text">
+        <p>
+          Somos una tienda dedicada a ofrecer los mejores productos para tus
+          mascotas. Nuestro objetivo es garantizar que tu compañero peludo
+          tenga todo lo que necesita para ser feliz y saludable.
+        </p>
+        <p>
+          Contamos con una amplia variedad de productos, desde juguetes hasta
+          accesorios, todos seleccionados cuidadosamente para asegurar la mejor
+          calidad.
+        </p>
+        </div>
+        <div class="acerca-imagen">
+          <img src="./img/imagen1.jfif" alt="mascotas" />
+        </div>
+        </div>
+      </div>
+      </section>
+      <!-- contacto -->
+      <section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas o quieres saber más? ¡Escríbenos!</p>
+    <form class="form-contacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Tu correo" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    </main>
+<footer>
+    <div class="footer-container">
+    <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+    <ul class="footer-links">
+      <li><a href="#terminos">Términos</a></li>
+      <li><a href="#privacidad">Privacidad</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="social-icons">
+   <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+   <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+   <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</footer>
+  </body>
+</html>
+<script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const navLeft = document.querySelector(".nav-left");
+
+  toggleBtn.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+  });
+</script>

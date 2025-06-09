@@ -1,0 +1,516 @@
+@font-face {
+  font-family: 'Flower-kingdom';
+  src: url('./fonts/Flowers\ Kingdom.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+    /*color */
+  --color-primario: #ffd6e0;      
+  --color-secundario: #cdb4db;    
+  --color-acento: #a2d2ff;        
+  --color-fondo: #fefae0;         
+  --color-texto: #444444;         
+  --color-footer: #bde0fe;        
+  --color-productos: #e2f0cb;     
+
+  --fuente-principal: 'Arial', sans-serif;
+  --fuente-secundaria: 'Comfortaa', sans-serif;
+  --fuente-titulo: 'Flower-kingdom', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: #fdfdfd;
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+.top-bar {
+    background-color: var(--color-secundario);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: var(--fuente-secundaria);
+}
+header {
+  background-color: var(--color-primario);
+  justify-content: flex-end;
+  padding: 10px 20;
+}
+.nav-container{
+   display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: var(--color-primario);
+  position: relative;
+}
+.nav-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.nav-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-acento);
+    border-radius: 999px;
+    padding: 5px 20px;
+    
+    
+
+}
+.nav-bar {
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+  font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-bar a:hover {
+  color: var(--color-secundario);
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 150px;
+  height: auto; 
+}
+
+.carrito, .usuario {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carrito:hover, .usuario:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.menu-toggle {
+  display: none; 
+}
+/* main*/
+#inicio {
+  position: relative;
+ background-color: var(--color-fondo);
+ padding: 60px 20px 0 20px;
+  overflow: hidden;
+}
+.decoracion {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 1;
+}
+.gato {
+  position:absolute;
+ bottom: -50px;
+  left: 0;
+}
+.perro {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+}
+.titulo {
+  text-align: center;
+  font-family: var(--fuente-principal);
+  color: var(--color-secundario);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  
+}
+.titulo h1 {
+  font-size: 2.5em;
+  font-family: var(--fuente-titulo);
+  color: var(--color-acento);
+  margin-bottom: 20px;
+  padding: 0 20px;
+  line-height: 2.5;
+
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* animación de entrada */
+ opacity: 0;
+  transform: translateY(20px); 
+  animation: aparecer 1s ease-out forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+.titulo p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: var(--color-texto);
+  margin-bottom: 20px;
+  padding: 0 20px;
+  font-family: var(--fuente-secundaria);
+}
+.titulo h4 {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+
+}
+.titulo form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+
+}
+.titulo input[type="email"] {
+  padding: 14px 20px;
+  border: 2px solid var(--color-secundario);
+  border-radius: 25px; 
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  font-family: var(--fuente-principal);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.titulo input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+.titulo form button {
+  padding: 12px 20px;
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.titulo form button:hover {
+  background-color: var(--color-acento);
+  transform: scale(1.05); 
+}
+
+.productos {
+  padding: 40px 20px;
+  background-color: var(--color-productos);
+  text-align: center;
+}
+.productos h2 {
+  font-size: 2.5rem;
+  color: var(--color-texto);
+  margin-bottom: 40px;
+  font-family: var(--fuente-secundaria);
+  text-align: left;
+}
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.producto {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.producto h3 {
+  font-size: 1.5rem;
+  color: var(--color-texto);
+  margin: 10px 0;
+  font-family: var(--fuente-secundaria);
+}
+.producto p {
+  font-size: 1rem;
+  color: var(--color-texto);
+  padding: 0 20px 20px;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+}
+.info-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 0 20px 20px;
+  gap: 10px;
+}
+.precio {
+  font-weight: bold;
+  color: var(--color-secundario);
+  font-size: 1.2rem;
+}
+.btn-agregar {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+.btn-agregar:hover {
+  background-color: var(--color-secundario);
+  transform: scale(1.05); 
+}
+/*acerca de */
+.acerca {
+  padding: 60px 20px;
+  background-color: var(--color-fondo);
+  position: relative;
+}
+.acerca-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  
+}
+.acerca h2 {
+  font-size: 2.5rem;
+  color: var(--color-texto);
+  margin-bottom: 40px;
+  font-family: var(--fuente-secundaria);
+  justify-content: space-between;
+}
+.acerca-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.acerca-text {
+  flex: 1;
+}
+.acerca-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-family: var(--fuente-secundaria);
+}
+.acerca-imagen {
+  flex: 1;
+}
+.acerca-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*contacto */
+.contacto {
+  padding: 60px 20px;
+  background-color: var(--color-fondo);
+  text-align: center;
+  font-family: var(--fuente-secundaria);
+}
+.contacto h2 {
+  font-size: 2.5rem;
+  color: var(--color-texto);
+  margin-bottom: 20px;
+}
+.contacto p {
+  font-size: 1.2rem;
+  color: var(--color-texto);
+  margin-bottom: 40px;
+}
+.form-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-contacto label {
+  font-weight: bold;
+  color: var(--color-texto);
+}
+.form-contacto input,
+.form-contacto textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: var(--fuente-principal);
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.form-contacto button {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-contacto button:hover {
+  background-color: var(--color-secundario);
+  transform: scale(1.05);
+}
+/*footer*/
+footer {
+  background-color: var(--color-footer);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-container p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: var(--color-acento); 
+}
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.social-icons a {
+  font-size: 24px;
+  color: var(--color-texto);
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--color-secundario);
+}
+@media (max-width: 768px) {
+  .nav-left {
+     display: none;
+    flex-direction: column;
+    background-color: var(--color-primario);
+    position: absolute; 
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+  .menu-toggle {
+   display: block;
+   font-size: 24px;
+   background: none;
+   border: none;
+   cursor: pointer;
+   color: var(--color-texto);
+   justify-self: end;
+  }
+
+  .nav-left.active {
+    display: flex;
+  }
+  .nav-container{
+    grid-template-columns: 1fr auto 1fr;
+    position: relative;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .decoracion {
+    display: none; 
+  }
+}
+@media (max-width:716px) {
+.productos-container {
+  justify-items: center;
+}
+}
+@media (max-width:480px) {
+  .titulo form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+.producto {
+  max-width: 100%;
+}
+.form-contacto button {
+  align-self: center;
+}
+}
